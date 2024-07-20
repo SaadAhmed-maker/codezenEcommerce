@@ -1,0 +1,70 @@
+<div class="containerCustom">
+
+    
+    <div class="card" style="width: 18rem;">
+   
+    <div class="card-body">
+        <h5 class="card-title">Your Cart Items</h5>
+        
+            <div class="" *ngFor="let items of cartDetails">
+                 <label for="">Product Name</label>    <input type="text" name="" id="" value={{items.productName}}>
+               </div>
+            <div class="" *ngFor="let items of cartDetails">
+                 <label for="">Product Price</label>    <input type="text" name="" id="" value={{items.productPrice}}>
+                 <label for="">Total Amount </label> <input type="text" value={{items.TotalCost}}>
+               </div>
+               
+               
+    </div>
+  </div>
+
+
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+   Confirm Your Order
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <div class="card" style="width: 18rem;">
+                
+                <div class="card-body">
+                    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                        <label for="first-name">First Name: </label>
+                        <input id="first-name" type="text" formControlName="firstName">
+                        <p>Form Status: {{ profileForm.status }}</p>
+                        <label for="last-name">Last Name: </label>
+                        <input id="last-name" type="text" formControlName="lastName">
+                        <label for="last-name">Mobile No: </label>
+                        <input id="last-name" type="text" formControlName="mobno">
+                        <label for="last-name">Adress: </label>
+                        <input id="last-name" type="text" formControlName="adress">
+                        <label for="last-name">Age: </label>
+                        <input id="last-name" type="text" formControlName="age">
+                        <label for="last-name">DOB: </label>
+                        <input id="last-name" type="text" formControlName="dob">
+                  <button  class="btn btn-secondary" data-bs-dismiss="modal">Submit Your Order</button>
+                      </form>
+                </div>
+              </div>
+
+           
+        </div>
+        <div class="modal-footer">
+        
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>

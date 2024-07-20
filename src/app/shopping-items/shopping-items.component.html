@@ -1,0 +1,66 @@
+<div class="codezenHeading">
+    <h1>CodeZen Ecommerce</h1>
+</div>
+
+<div class="itemsParent">
+<div class="itemRow1">
+    <div class="card" style="width: 18rem;">
+        <img src="Images/graphicscard.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class=""><label for="">Price</label><input type="text" [value]="totalProductArray[0].productPrice"></div>
+       <div class="d-flex justify-content-center">
+         <button type="button" class="btn btn-primary addToCartbtn"><span><button style="background-color: red;" (click)="removeItem('left-top')">-</button></span> {{productCounterLeftTopp}} <span><button (click)="addItem('left-top')" style="background-color: green;">+</button></span> </button>
+        </div>  
+      
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="Images/graphicscard.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class=""><label for="">Price</label><input type="text" [value]="totalProductArray[1].productPrice"></div>
+          <div class="d-flex justify-content-center">
+
+            <button type="button" class="btn btn-primary addToCartbtn"><span><button style="background-color: red;" (click)="removeItem('right-top')">-</button></span> {{productCounterRightTopp}} <span><button (click)="addItem('right-top')" style="background-color: green;">+</button></span> </button>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+
+<div class="itemRow2">
+    <div class="card" style="width: 18rem;">
+        <img src="Images/graphicscard.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class=""><label for="">Price</label><input type="text" [value]="totalProductArray[2].productPrice"></div>
+            <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-primary addToCartbtn"><span><button style="background-color: red;" (click)="removeItem('left-bottom')">-</button></span> {{productCounterBottomLeftt}} <span><button (click)="addItem('left-bottom')" style="background-color: green;">+</button></span> </button>
+            </div>
+      
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="Images/graphicscard.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class=""><label for="">Price</label><input type="text" [value]="totalProductArray[3].productPrice"></div>
+            <div class="d-flex justify-content-around">
+              <button type="button" class="btn btn-primary addToCartbtn"><span><button style="background-color: red;" (click)="removeItem('right-bottom')">-</button></span> {{productCounterBottomRightt}} <span><button (click)="addItem('right-bottom')" style="background-color: green;">+</button></span> </button>
+            </div>
+      
+        </div>
+      </div>
+    
+</div>
+
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-outline-success" routerLink="/shoppingCart" (click)="checkout()">Checkout</button>
+    </div>
+
+   
+</div>
+
+
+  
